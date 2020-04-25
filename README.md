@@ -1,6 +1,6 @@
 **Problem Statement:** 
 
-The project aims to develop a predictive model that can classifies risk levels using data points in the existing life insurance assessment.
+The project aims to develop a predictive model that can classif risk levels using data points in the existing life insurance assessment.
 
  
 
@@ -14,11 +14,11 @@ In the dataset, there are 128 columns which consists of 60 categorical features,
 
 **Checking for null values:** 
 
-Few columns in the dataset consisted of null values. For example, Columns that have null values are Employment_Info_1, Employment_Info_4. So, there are 13 columns which are having NULL values.
+Few columns in the dataset consisted of null values. For example, some columns that have null values are Employment_Info_1, Employment_Info_4. Total there are 13 columns which are having NULL values.
 
 **Outliers:**
 
-![img](file:///C:\Users\Sarve\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png)
+![outliers](https://user-images.githubusercontent.com/61173652/80275212-7a9a4580-86fd-11ea-9a99-5a789a989dc0.png)
 
 From the above box plot, we can clearly visualize that the numerical features such as Ht, Wt, BMI consist of Outliers. Outliers are nothing but extreme values that deviate from other observations on data.
 
@@ -30,7 +30,7 @@ From the above box plot, we can clearly visualize that the numerical features su
 
 **Distribution of rows by Response variable:**
 
-![img](file:///C:\Users\Sarve\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png)
+![response](https://user-images.githubusercontent.com/61173652/80275265-c5b45880-86fd-11ea-819c-8f672f838559.png)
 
 Grouping the low risk associated with life insurance policy into one class. Now the response variables have 4 classes of risk.
 
@@ -38,7 +38,7 @@ Grouping the low risk associated with life insurance policy into one class. Now 
 
  
 
-![img](file:///C:\Users\Sarve\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png)
+![grouping_response](https://user-images.githubusercontent.com/61173652/80275280-d95fbf00-86fd-11ea-990f-88acd1116092.png)
 
  
 
@@ -52,21 +52,21 @@ Grouping the low risk associated with life insurance policy into one class. Now 
 
 IQR score to filter out the outliers by keeping only valid values.
 
-![img](file:///C:\Users\Sarve\AppData\Local\Temp\msohtmlclip1\01\clip_image004.png)
+![treating_outliers](https://user-images.githubusercontent.com/61173652/80275288-e67cae00-86fd-11ea-91f7-32ae493a768d.png)
 
  
 
-**Feature Selection and Label Encoding:**
+**Feature Selection and Encoding Features:**
 
-Analyzing the dataset, we found that there is one categorical column. To handle categorical column, we are using label encoding technique.
+Analyzing the dataset, we found that there are many categorical columns. To handle categorical columns, we are using Pandas get dummies encoding technique.It is a one step procedure to get the dummy variables for categorical features.
 
 Dropping the columns which are irrelevant or does not contribute towards the target variable. For example Medical_History_10 feature is having more number of null values. Also ID feature we have dropped.
 
 **Building Models:**
 
-Splitting the dataset into 80% training set and 20% testing set. Finally we have built different Classification models. From all the classification models, RandomForest performs the best. It gave an accuracy around 64.61%. 
+Splitting the dataset into 80% training set and 20% testing set. Finally we developed different Classification models. From all the classification models, RandomForest performs the best. It gave an accuracy around 64.61%. 
 
-![img](file:///C:\Users\Sarve\AppData\Local\Temp\msohtmlclip1\01\clip_image005.png)
+![final_result](https://user-images.githubusercontent.com/61173652/80275295-f3999d00-86fd-11ea-940f-b3b147a445b3.png)
 
  
 
